@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddFnameColumnToUsersTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('Fname', 50);
+            $table->string('Lname', 50);
+            $table->string('Phone',25)->nullable();
+            $table->string('Mobile',25)->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('Fname');
+            $table->dropColumn('Lname');
+            $table->dropColumn('Phone');
+            $table->dropColumn('Mobile');
+        });
+    }
+}
