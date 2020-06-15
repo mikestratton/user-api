@@ -18,14 +18,12 @@ class UserCollection extends ResourceCollection
 
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'email' => $this->email,
             'Fname' => $this->Fname,
             'Lname' => $this->Lname,
+            'email' => $this->email,
             'Phone' => $this->Phone,
             'Mobile' => $this->Mobile,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+
         ];
     }
 }
