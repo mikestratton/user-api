@@ -23,7 +23,6 @@ class UserCollection extends ResourceCollection
             'email' => $this->email,
             'Phone' => $this->Phone,
             'Mobile' => $this->Mobile,
-
         ];
     }
 }
