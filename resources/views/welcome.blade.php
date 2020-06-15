@@ -70,11 +70,11 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ url('/user') }}">User Read-Only API</a>
 
-                        @if (Route::has('register'))
+                        {{--@if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        @endif--}}
                     @endauth
                 </div>
             @endif
